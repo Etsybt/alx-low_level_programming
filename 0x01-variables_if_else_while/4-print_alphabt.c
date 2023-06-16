@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
  * main - entry
  * Return: 0
@@ -9,8 +9,11 @@ int main(void)
 
 	for (l = 'a'; l <= 'z'; l++)
 	{
+		if (l != 'q' && l != 'e')
+	{
 		putchar(l);
 	}
-putchar('\n');
-return (0);
+	}
+	putchar('\n');
+	return (0);
 }
