@@ -2,19 +2,19 @@
 /**
   * string_toupper - changes all lowercase letters
   * of a string to uppercase
-  * @s: string to be returned
+  * @str: string to be returned
   * Return: uppercase string
   */
-char *string_toupper(char *s)
+char *string_toupper(char *str)
 {
 	int i;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
 			i++;
 	}
-	return (s);
+	return (str);
 
 }
