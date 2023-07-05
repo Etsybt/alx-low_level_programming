@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  * sqrt - function
+  * sqrt2 - function
   * @x: number
   * @y: number
   * Return: square root of n
