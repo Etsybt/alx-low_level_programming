@@ -5,7 +5,7 @@
   * @y: number
   * Return: square root of n
   */
-int sqrt(int x, int y)
+int sqrt2(int x, int y)
 {
 	if ((y * y) == x)
 	{
@@ -15,7 +15,7 @@ int sqrt(int x, int y)
 	{
 		return (-1);
 	}
-	return (sqrt(x, y + 1));
+	return (sqrt2(x, y + 1));
 }
 /**
 * _sqrt_recursion - returns the natural square root of a number
@@ -24,5 +24,5 @@ int sqrt(int x, int y)
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (sqrt2(n, 1));
 }
