@@ -1,1 +1,45 @@
-static_libraries
+[master 88606df] libmy.a
+ 43 files changed, 429 insertions(+)
+ create mode 100644 0x09-static_libraries/0-isupper.c
+ create mode 100644 0x09-static_libraries/0-isupper.o
+ create mode 100644 0x09-static_libraries/0-memset.c
+ create mode 100644 0x09-static_libraries/0-memset.o
+ create mode 100644 0x09-static_libraries/0-strcat.c
+ create mode 100644 0x09-static_libraries/0-strcat.o
+ create mode 100644 0x09-static_libraries/1-isdigit.c
+ create mode 100644 0x09-static_libraries/1-isdigit.o
+ create mode 100644 0x09-static_libraries/1-memcpy.c
+ create mode 100644 0x09-static_libraries/1-memcpy.o
+ create mode 100644 0x09-static_libraries/1-strncat.c
+ create mode 100644 0x09-static_libraries/1-strncat.o
+ create mode 100644 0x09-static_libraries/100-atoi.c
+ create mode 100644 0x09-static_libraries/100-atoi.o
+ create mode 100644 0x09-static_libraries/2-strchr.c
+ create mode 100644 0x09-static_libraries/2-strchr.o
+ create mode 100644 0x09-static_libraries/2-strlen.c
+ create mode 100644 0x09-static_libraries/2-strlen.o
+ create mode 100644 0x09-static_libraries/2-strncpy.c
+ create mode 100644 0x09-static_libraries/2-strncpy.o
+ create mode 100644 0x09-static_libraries/3-islower.c
+ create mode 100644 0x09-static_libraries/3-islower.o
+ create mode 100644 0x09-static_libraries/3-puts.c
+ create mode 100644 0x09-static_libraries/3-puts.o
+ create mode 100644 0x09-static_libraries/3-strcmp.c
+ create mode 100644 0x09-static_libraries/3-strcmp.o
+ create mode 100644 0x09-static_libraries/3-strspn.c
+ create mode 100644 0x09-static_libraries/3-strspn.o
+ create mode 100644 0x09-static_libraries/4-isalpha.c
+ create mode 100644 0x09-static_libraries/4-isalpha.o
+ create mode 100644 0x09-static_libraries/4-strpbrk.c
+ create mode 100644 0x09-static_libraries/4-strpbrk.o
+ create mode 100644 0x09-static_libraries/5-strstr.c
+ create mode 100644 0x09-static_libraries/5-strstr.o
+ create mode 100644 0x09-static_libraries/6-abs.c
+ create mode 100644 0x09-static_libraries/6-abs.o
+ create mode 100644 0x09-static_libraries/9-strcpy.c
+ create mode 100644 0x09-static_libraries/9-strcpy.o
+ create mode 100644 0x09-static_libraries/README.md
+ create mode 100644 0x09-static_libraries/_putchar.c
+ create mode 100644 0x09-static_libraries/_putchar.o
+ create mode 100644 0x09-static_libraries/libmy.a
+ create mode 100644 0x09-static_libraries/main.h
