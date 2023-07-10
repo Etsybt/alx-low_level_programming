@@ -10,14 +10,13 @@
   */
 char *str_concat(char *s1, char *s2)
 {
+	char *s3;
 	unsigned int i, j, len1, len2;
 
 	i = 0;
 	j = 0;
 	len1 = 0;
 	len2 = 0;
-
-	char *s3;
 
 	s3 = malloc(sizeof(char) * (len1 + len2 + 1));
 
