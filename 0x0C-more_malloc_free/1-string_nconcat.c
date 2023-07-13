@@ -25,10 +25,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	concat = malloc(sizeof(char) * (len + 1));
 
-	if (ptr == NULL)
+	if (concat == NULL)
 		return (NULL);
 	for (i = 0; s2[i] && i < n; i++)
-		ptr[len++] = s2[i];
+		concat[len++] = s2[i];
 
 	concat[len] = '\0';
 	return (concat);
