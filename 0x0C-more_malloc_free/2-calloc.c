@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
   * _memset - memory
   * @s: pointer
@@ -32,6 +33,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (k == 0)
 		return (NULL);
+
 	_memset(k, 0, sizeof(int) * nmemb);
+
 	return (k);
 }
