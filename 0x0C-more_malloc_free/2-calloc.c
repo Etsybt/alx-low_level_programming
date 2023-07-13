@@ -14,14 +14,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	j = nmemb * size;
 
-	if (size <= 0 || nmemb <= 0)
+	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 	grid = malloc(j);
 
 	if (grid == NULL)
+	{
 		return (NULL);
+	}
 
 	for (i = 0; i < (j); i++)
 	{
