@@ -1,21 +1,5 @@
 #include "main.h"
 /**
-  * _memset - memory
-  * @s: pointer
-  * @j: constant
-  * @n: bytes
-  * Return: s
-  */
-char *_memset(char *s, char j, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = j;
-
-	return (ptr);
-}
-/**
   * _calloc - allocates memory for an array
   * @nmemb: elements of an array
   * @size: size of the array
@@ -23,20 +7,25 @@ char *_memset(char *s, char j, unsigned int n)
   */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *k;
+	char *grid;
+	unsigned int i;
 
 	if (size == 0 || nmemb == 0)
 	{
 		return (NULL);
 	}
-	k = malloc(sizeof(int) * nmemb);
+	grid = malloc(nmemb * size);
 
-	if (k == 0)
+	if (grid != NULL)
+	{
+		for (i = 0; i < (nmemb * size); i++)
+		{
+			grid[i] = 0;
+		}
+		return (grid);
+	}
+	else
 	{
 		return (NULL);
 	}
-
-	_memset(k, 0, sizeof(int) * nmemb);
-
-	return (k);
 }
