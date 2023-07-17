@@ -14,12 +14,12 @@ int _strlen(const char *str)
 	return (len);
 }
 /**
-  * _strcopy - copies a string
+  * _strcpy - copies a string
   * @dest: destination of str
   * @src: source string
   * Return: pointer to dest
   */
-char *_strcopy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int a;
 
@@ -42,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	doggie = (dog_t *) malloc(sizeof(dog_t));
+	doggie = malloc(sizeof(dog_t));
 	if (doggie == NULL)
 		return (NULL);
 
@@ -61,9 +61,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	doggie->name = _strcopy(doggie->name, name);
+	_strcpy(doggie->name, name);
 	doggie->age = age;
-	doggie->owner = _strcopy(doggie->owner, owner);
+	_strcpy(doggie->owner, owner);
 
 	return (doggie);
 }
