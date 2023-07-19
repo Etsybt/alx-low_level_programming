@@ -6,12 +6,12 @@
   * @argv: argument vector
   * Return: 0
   */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int a, b, result;
+	int a, b;
 	int (*p)(int, int);
 
-	if (argc < 4 || argc > 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -22,13 +22,17 @@ int main(int argc, char *argv[])
 
 	p = get_op_func(argv[2]);
 
-	if (p == NULL)
+	if (!p)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	result = p(a, b);
+	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
-	printf("%d\n", result);
+	printf("%d\n", p(a, b));
 	return (0);
 }
