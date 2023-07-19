@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	int a, b, result;
 	int (*p)(int, int);
 
-	if (argc != 4)
+	if (argc < 4 || argc > 4)
 	{
 		printf("Error\n");
 		exit(98);
