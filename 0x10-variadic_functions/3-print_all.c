@@ -6,11 +6,10 @@
   */
 void print_all(const char * const format, ...)
 {
-	int i = 0, n = 0;
-	char *separator = ",";
-	char *s;
-
 	va_list list;
+	int i = 0, n = 0;
+	char *separator = ", ";
+	char *s;
 
 	va_start(list, format);
 
@@ -36,7 +35,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(list, char *);
-				if (!s)
+				if (s == NULL)
 					s = "(nil)";
 				printf("%s%s", s, separator);
 				break;
