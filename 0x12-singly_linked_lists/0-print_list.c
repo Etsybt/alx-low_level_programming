@@ -3,21 +3,26 @@
 /**
   * print_list - prints all the elements of a list_t list
   * @h: head
-  * Return: elements
+  * Return: count
   */
 
 size_t print_list(const list_t *h)
 {
-	list_t *current = h;
+	const list_t *current = h;
+	size_t count = 0;
 
 	while (current != NULL)
 	{
-		printf("%d ", current->data);
-		current = current->next
+		if (current->str != NULL)
+		{
+			printf("[%d] %s\n ", current->len, current->str);
+		}
+		else
+		{
+			printf("[0] (nil)\n");
+			count += 1;
+			current = current->next;
+		}
 	}
-	if (str == NULL)
-	{
-		printf("[0] (nil)");
-	}
-	printf("\n");
+	return (count);
 }
