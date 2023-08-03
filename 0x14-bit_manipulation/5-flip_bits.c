@@ -8,17 +8,15 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int a, num;
+	int a, num = 0;
 	unsigned long int c;
 	unsigned long int alt = n ^ m;
-
-	num = 0;
 
 	for (a = 63; a >= 0; a--)
 	{
 		c = alt >> a;
 		if (c & 1)
-			c++;
+			num++;
 	}
-	return (c);
+	return (num);
 }
