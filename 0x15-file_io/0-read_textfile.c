@@ -15,19 +15,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buff;
 
 	output = open(filename, O_RDONLY);
-
-	if (flename == NUL)
-		return (0);
-
 	if (output == -1)
 		return (0);
-
 	buff = malloc(letters * sizeof(char));
 	read_file = read(output, buff, letters);
 	write_file = write(STDOUT_FILENO, buff, read_file);
 	
 	free(buff);
 	close(output);
-
 	return (write_file);
 }
