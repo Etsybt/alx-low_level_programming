@@ -3,7 +3,8 @@
 
 /**
   */
-void print_error(const char *E) {
-	    fprintf(stderr, "Error: %s\n", E);
-	        exit(98);
+void print_abiv(char *h)
+{
+	printf("  %-35s", "ABI Version:");
+	printf("%d\n", h[8]);
 }
