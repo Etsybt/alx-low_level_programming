@@ -78,10 +78,55 @@ void print_Data(char *w)
 
 }
 
-
-
-void print_abiv(char *h)
+int main(int arc, char **arv)
 {
-	printf("  %-35s", "ABI Version:");
-	printf("%d\n", h[8]);
+	int output_elf, read_elf, c_elf, 64bit_objects = 0;
+	char w[16];
+
+	if (arc != 2)
+	{
+		dprintf(STDERR_FILENO, "argument number is not valid\n");
+		exit(98);
+	}
+	if (arv[1] == 0)
+	{
+		dprintf(STDERR_FILENO, "Enter a name\n");
+		exit(98);
+	}
+
+	output_elf = open(arv[1], O_RDONLY);
+	if (output_elf == -1)
+	{
+		dprintf(STDERR_FILENO, "file not able to open\n");
+		exit(98);
+	}
+
+	read_elf = read(fd_elf, w, 32);
+	if (read_elf == -1)
+	{
+		dprintf(STDERR_FILENO, "ERROR\n");
+		exit(98);
+	}
+	elf_check(w);
+	if (w[4] == 2)
+		64bit_objects = 1;
+	print_Magic(w);
+	print_Class(w, 64bit_objects);
+	print_Data(w);
+	print_version(w);
+
+	c_elf = close(output_elf);
+	if (c_elf == -1)
+	{
+		dprintf(STDERR_FILENO, "ERROR\n");
+		exit(98);
+	}
+	return (0);
 }
+
+
+
+
+
+
+
